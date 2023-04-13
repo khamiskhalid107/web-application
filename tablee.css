@@ -1,0 +1,20 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid black;
+    padding: 20px;
+}
+th{
+    border: 1px solid black;
+    padding: 2px;
+}
+ul{
+    color: blue;
+}
+a[href="www.harvad.edu"]
+button:hover{
+    background-color: #13e81a;
+    
+}

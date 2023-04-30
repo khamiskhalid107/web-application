@@ -1,0 +1,24 @@
+header {
+	background-color: #1ddc2a;
+	color: #d13232;
+	padding: 10px;
+	text-align: center;
+}
+
+main {
+	margin: 20px;
+}
+
+footer {
+	text-align: center;
+	margin: 20px;
+}
+
+button {
+	padding: 10px;
+	background-color:grey;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}

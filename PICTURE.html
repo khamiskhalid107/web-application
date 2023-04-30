@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+    #text {
+  font-size: 24px;
+  color: rgb(48, 23, 210);
+  background-color: rgb(219, 124, 60);
+}
+body{
+    background-color: rgb(92, 221, 215);
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text"></div>
+    <script>
+        const text = document.getElementById("text");
+        const phrases = ["DAYDAPRY", "MUNDHIR", "ASHA NJUGU", "KHAMIS"];
+        let i = 0;
+        setInterval(() => {
+          text.innerHTML = phrases[i];
+          i++;
+          if (i >= phrases.length) {
+            i = 0;
+          }
+        }, 3000);
+      </script>
+
+
+      <style>
+        .menu {
+  position: relative;
+}
+.menu-button {
+  
+  color: #fff;
+  padding: 10px;
+  
+}
+.menu-items {
+ 
+  top: 100%;
+  left: 0;
+  width: 10%;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+   display: none;
+}
+.menu-items.show {
+  display: block;
+}
+.menu-items li a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+}
+menu{
+  float: left;
+}
+.menu1{
+  float: right;
+}
+
+      </style>
+      <div class="menu">
+        <div class="menu-button">Menu</div>
+        <ul class="menu-items">
+          <li><a href="#">Name</a></li>
+          <li><a href="#">Address</a></li>
+          <li><a href="#">District</a></li>
+          <li><a href="#">Phone number</a></li>
+        </ul>
+      </div>
+      <script>
+        const menuButton = document.querySelector(".menu-button");
+        const menuItems = document.querySelector(".menu-items");
+      
+        menuButton.addEventListener("click", () => {
+          menuItems.classList.toggle("show");
+        });
+      </script>
+
+
+
+      <style>
+        div {
+  position: relative;
+}
+img {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  transition: width 0.5s ease-in-out;
+  margin-top: 30px;
+}
+
+      </style>
+      <div>
+        <img id="myImage" src="QM-01-01.png">
+        <button onclick="moveImage()">Move Image</button>
+      </div>
+      <script>
+        const image = document.getElementById("myImage");
+        let position = 0;
+      
+        function moveImage() {
+          position += 10;
+          image.style.left = position + "px";
+        }
+      
+        image.addEventListener("mouseover", () => {
+          image.style.width = "200px";
+        });
+      
+        image.addEventListener("mouseout", () => {
+          image.style.width = "100px";
+        });
+      </script>            
+</body>
+</html>

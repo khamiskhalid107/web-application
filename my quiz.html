@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script>
+        
+        function capitalizeHeadings() {
+            const headings = document.querySelectorAll('h1, h2');
+          
+            headings.forEach((heading) => {
+              heading.textContent = heading.textContent.toUpperCase();
+            });
+          }
+          
+          
+    </script>
+</head>
+<body>
+    <h1 onclick="capitalizeHeadings()">Suza</h1>
+    <h2 onclick="capitalizeHeadings()">oyee</h2>
+</body>
+</html>

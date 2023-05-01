@@ -1,0 +1,36 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-transform: capitalize;
+}
+th,td{
+    border: 1px solid black;
+    padding: 4px;
+}
+h1{
+    text-transform: capitalize;
+    text-align: center;
+    background: #18a5f1;
+    font-style: italic;
+}
+ol{
+    text-transform: capitalize;
+    color: blue;
+
+}
+ul{
+    color: #da0505;
+    font-style: italic;
+    font-style: oblique;
+}
+button{
+    background: #800ced;
+    height: 40px;
+    width: 55px;
+}
+button:hover{
+    background-color: #da0505;
+}
+.T{
+    font-size: 20px;
+}

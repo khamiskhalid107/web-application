@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Regular Expression</h2>
+  
+    <script>
+
+        const regularExp = /^<\w+(\s+\w+="[^"]*")*\s*\/>$/;
+
+        /*
+        ^ - the start of the string.
+        < - matches the opening angle bracket.
+        \w+ - matches one or more word characters (letters, digits, or underscores), representing the tag name.
+        ( - begins a capturing group.
+        \s+ - matches one or more whitespace characters.
+        \w+="[^"]*" - matches a property in the format name="value". It matches one or more word characters for the property name, followed by =, and then matches the property value enclosed in double quotes. [^"]* matches any character except a double quote, allowing for a value with any number of characters.
+        )* - indicates that the capturing group can be repeated zero or more times to allow for multiple properties.
+        \s* - matches zero or more whitespace characters after the properties.
+        \/> - matches the closing slash followed by the closing angle bracket, representing the self-closing tag.
+        $ - asserts the end of the string.
+        */  
+
+        //Valid arguments
+        console.log(regularExp.test("<img src=\"foo.jpg\" />"));                        
+        console.log(regularExp.test("<img />"));                            
+        console.log(regularExp.test("<a href=\"foo.html\" id=\"stuff\" />")); 
+        
+        //Invalid arguments
+        console.log(regularExp.test("</>"));                 
+        console.log(regularExp.test("<img src= />")); 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>001</title>
+   
+    <style>
+        #test{
+            width: 50px;
+            height: 22px;
+            background-color: aqua;
+            margin: 100px;
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>my name is khamis </h1>
+    <button id="btn" onclick="khamis()">hhh</button>
+    <p class="huzaima">my first love</p>
+    <p class="huzaima">huzaima</p>
+
+
+    <div id="test">
+        <form action=""><br><br>
+            <h1>heading</h1>
+            <input id="hh1" type="text" value="" placeholder="heading">
+            <h1>heading 3</h1>
+            <input id="hh2" type="text" placeholder="heading"><br><br>
+            <button id="btn1">login</button>
+        </form>
+    </div>
+
+    <script>
+
+        addEventListener
+        let abuu = ['suza',12,'umoja','embe',14,true,2330,'tanz'];
+        //console.log(abuu[0]+abuu[5]);
+      //  console.log(abuu.length)
+
+    //   function khamis() {
+    //     alert('hujambo');
+    //   }
+    //   khamis();
+    // let car = {
+    //     name:' nj',
+    //     age:32,
+    //     color:'blue'
+        
+        
+    // }
+    // console.log(car.name+''+car.color+car.age+car.age);
+    // let my1 = document.getElementsByClassName('huzaima');
+    // console.log(my1);
+    // let my2 = document.querySelectorAll('.huzaima');
+    // console.log(my2);
+    // let my3 = document.getElementsByTagName('h1');
+    // console.log(my3);
+let btn2 = document.getElementById('btn1');
+btn2.addEventListener('click',function(){
+ let head = document.getElementById("hh1").value;
+
+ console.log(head);
+ let head2 = document.getElementById("hh2").value;
+ let letter = /[a-z]/i
+
+ if (letter.test("${head}")) {
+    console.log("good things");
+ }else{
+    console.log("newsa");
+ }
+})
+
+let head = document.getElementById("hh1").value;
+
+console.log(head);
+
+    </script>
+</body>
+</html>

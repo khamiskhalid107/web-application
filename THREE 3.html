@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>My super nifty to-do list</h1>
+<ul id="list"></ul>
+<div>
+<input type="text" id="item" />
+<button id="add">add</button>
+<button id="remove">remove</button>
+</div>
+<script>document.addEventListener('DOMContentLoaded', function() {
+    var list = document.getElementById('list');
+    var addBtn = document.getElementById('add');
+    var removeBtn = document.getElementById('remove');
+    var itemInput = document.getElementById('item');
+    var isYellow = false;
+  
+    addBtn.addEventListener('click', function() {
+      var itemText = itemInput.value.trim();
+
+      if (itemText !== '') {
+        var itemWords = itemText.split(' ');
+        var itemLi = document.createElement('li');
+        
+        itemLi.textContent = itemText;
+        itemLi.style.backgroundColor = isYellow ? 'yellow' : 'white';
+        isYellow = !isYellow;
+  
+        list.appendChild(itemLi);
+        itemInput.value = '';
+      }
+    });
+  
+    removeBtn.addEventListener('click', function() {
+      var itemText = itemInput.value.trim().toLowerCase();
+      if (itemText !== '') {
+        var items = list.getElementsByTagName('li');
+        for (var i = 0; i < items.length; i++) {
+          var currentItem = items[i];
+          if (currentItem.textContent.toLowerCase() === itemText) {
+            currentItem.parentNode.removeChild(currentItem);
+            break;
+          }
+        }
+        itemInput.value = '';
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Regular Expression</h2>
+    <script>
+
+        //Defining the required regular expression
+        const regularExp = /^\$\d+(?:\.\d{2})?$/;
+
+        /* 
+            / - start and end of the regular expression 
+            ^ - beggining of any string
+            \ - it is an escape character
+            $ -  dollar sign 
+            d+ - (d) any digit character range from  0 - 9 (+) one or more digit should match
+            (?:\.\d{2})? - optional decimal part, (\.) decimal point should be matched, (\d{2}) matches exactly two digits range from 0 -9
+            $ - end of the string
+
+        */
+        console.log(regularExp.test("$14.99"));
+        console.log(regularExp.test("$1234567.00")); 
+        console.log(regularExp.test("$.90"));        
+
+        console.log(regularExp.test("$14"));   
+        console.log(regularExp.test("$134213.89money")); 
+        console.log(regularExp.test("$1.1a")); 
+
+    </script>
+</body>
+</html>

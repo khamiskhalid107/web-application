@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TA Assistance truck</title>
+</head>
+<body>
+<h1>TA Assistance truck</h1>
+<form id="ta-assistance-form">
+  <input type="text" id="entry" placeholder="Enter entry (directory id, description, duration)"><br><br>
+  <button type="button" id="add-entry">Add Entry</button>
+  <button type="button" id="summary">Summary</button>
+</form>
+<section id="entries"></section>
+<section id="summary"></section>
+
+<script>
+
+function addEntry() {
+  
+  var entry = document.getElementById("entry").value;
+
+  
+  if (entry === "") {
+    alert("Invalid entry");
+    return;
+  }
+
+  
+  var directoryId, description, duration;
+  var parts = entry.split(",");
+  directoryId = parts[0];
+  description = parts[1];
+  duration = parts[2];
+
+ 
+  var entryElement = document.createElement("li");
+  entryElement.textContent = directoryId + " " + description + " " + duration;
+
+  
+  document.getElementById("entries").appendChild(entryElement);
+}
+
+
+function summary() {
+  
+  var entries = document.getElementById("entries").children;
+
+ 
+  entries.sort(function(a, b) {
+    return parseInt(a.textContent.split(" ")[2]) - parseInt(b.textContent.split(" ")[2]);
+  });
+
+  
+  var summaryElement = document.createElement("h2");
+  summaryElement.textContent = "Summary";
+
+  
+  document.getElementById("summary").appendChild(summaryElement);
+
+ 
+  for (var i = 0; i < entries.length; i++) {
+    var entry = entries[i];
+    var entryElement = document.createElement("li");
+    entryElement.textContent = entry.textContent;
+    summaryElement.appendChild(entryElement);
+  }
+}
+
+
+document.getElementById("add-entry").addEventListener("click", addEntry);
+document.getElementById("summary").addEventListener("click", summary);
+</script>
+</body>
+</html>
